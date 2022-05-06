@@ -1,2 +1,2 @@
 # PracticalPython
-The home of Practical Pyhton on Discord
+The home of Practical Python on Discord
