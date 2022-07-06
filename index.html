@@ -18,12 +18,21 @@
       crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
-    <style>
 
-    </style>
+
 
   </head>
   <body>
+    <script>
+    function accordion_toggle(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("accordion-show") == -1) {
+        x.className += " accordion-show";
+      } else {
+        x.className = x.className.replace(" accordion-show", "");
+      }
+    }
+    </script>
     <header id="hero">
       <!-- Navbar -->
       <nav class="navbar">
@@ -37,7 +46,7 @@
           <!-- Navbar links -->
           <ul class="nav-menu">
             <li><a class="nav-link" href="#projects">SERVER FEATURES</a></li>
-            <li><a class="nav-link" href="#rules">RULES</a></li>
+            <!-- <li><a class="nav-link" href="#rules">RULES</a></li> -->
 
             <li>
               <a
@@ -81,6 +90,8 @@
         >
       </section>
     </header>
+
+
 
     <!-- Features -->
     <section id="projects" class="project-container container">
@@ -135,65 +146,7 @@
         <br><br>
     </section>
 
-<section id="rules" class="project-container container">
-   <div class="division"></div>
-    <div class="content-text">
-      <h2>Server Rules</h2>
-      <p>Let's set the tone so everyone can have fun.</p>
-      <table>
-        <tr>
-          <td>
-            <button class="accordion">Rule 1</button>
-            <div class="panel"><p>Follow the Discord Community Guidelines and Terms Of Service.</p></div>
-          </td>
-          <td>
-            <button class="accordion">Rule 2</button>
-            <div class="panel"><p>Mods have final say. Feel free to appeal.</p></div>
-          </td>
-          <td>
-            <button class="accordion">Rule 3</button>
-            <div class="panel"><p>No NSFW content is allowed in the server. This is a Python server.</p></div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button class="accordion">Rule 4</button>
-            <div class="panel"><p>Don't use Racial, Homophobic or Transphobic slurs. Respect all members.</p></div>
-          </td>
-          <td>
-            <button class="accordion">Rule 5</button>
-            <div class="panel"><p>No self-bots. We have enough bots in this server. More just creates spam.</p></div>
-          </td>
-          <td>
-            <button class="accordion">Rule 6</button>
-            <div class="panel"><p>Just ask your question. Dont ask if you can ask your question.</p></div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button class="accordion">Rule 7</button>
-            <div class="panel"><p>Keep discussions relevant to channel topics.</p></div>
-          </td>
 
-          <td>
-            <button class="accordion">Rule 8</button>
-            <div class="panel"><p>Do not DM members without getting their permission first. If you want coding help, use the help channels.</p></div>
-          </td>
-          <td>
-            <button class="accordion">Rule 9</button>
-            <div class="panel"><p>No unapproved advertising, including requests for paid work or your discord server. You can put your project in #-finished-projects with approval.</p></div>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            <button class="accordion">Rule 10</button>
-            <div class="panel"><p>Do not try to mention everyone tags, or unnecessarily ping members/roles. You should never ping members who are not present n the current discussion, unless they've previously given you permission.</p></div>
-          </td>
-        </tr>
-      </table>
-    </div> 
-</section>
 
 
     <br><br><br>
