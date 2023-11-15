@@ -1,3 +1,7 @@
+"""
+This is a comment from Xarlos!
+"""
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
