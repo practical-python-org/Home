@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>{% block title %}{% endblock %}</title>
+    <title>change background color in css</title>
+    <style>
+      .discord-link{
+        margin-left: 600px;
+      }
+      .Discord-link2{
+        margin-left: 600px;
+      }
+      body{
+        background-color: #1e1e1e;
+      }
+      h1{
+        margin-left: 340px;
+      }
+      h1,h2,h3,h4,h6,p{
+        color:azure;
+      }
+      h3{
+        margin-left: 350px;
+      }
+      .header-main{
+        width: 100%;
+        height: 60px;
+        background-color: #0a0a0a;
+        display: flex;
+        justify-content: space-between;
+      }
+      .header-main-logo{
+          width: fit-content;
+          height: 100%;
+          margin-top: 3px;
+          padding-left: 40px;
+          display: flex;
+      }
+      .header-main-nav{
+        width: fit-content;
+        height: 100%;
+        
+      }
+      .header-main-sm{
+        width: fit-content;
+        height: 100%;
+        padding-right: 60px;
+        display: flex;
+        align-self: center;
+      }
+      .header-main-logo img{
+        width: 70px;
+        height: 60px;
+        object-fit: contain;
+        
+      }
+      .header-main-nav ul{
+          list-style: none;
+          margin-left: 150px;
+      }
+      .header-main-nav ul li{
+        display: inline;
+        float: left;
+        margin-right: 100px;
+      }
+      .header-main-nav ul li a{
+        padding: 0 10px;
+        
+        
+        
+        height: 100%;
+      }
+      .header-main-nav ul li a:hover{
+        color: #ff3c78;
+      }
+      .header-main-sm-disc{
+        width: 30px;
+        height: 30px;
+        background-image: url(  /static/discord\ logo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 20px;
+      }
+      .header-main-sm-git{
+        width: 30px;
+        height: 30px;
+        background-image: url(  /static/github\ logo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
+      button {
+        color: #fff;
+        padding: 8px 22px;
+        border-radius: 6px;
+        background: #ff3c78;
+        transition: all 0.2s ease;
+        margin-left: 600px;
+    }
+
+    button:active {
+        transform: scale(0.96)
+    }
+    *,
+*:before,
+*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #0a0a0a;
+}
+nav{
+  height:100vh;
+  width: 70vw;
+  min-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+nav a{
+  position: relative;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+  color: #a0a0a0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+nav a:after{
+  content: "";
+  position: absolute;
+  background-color: #ff3c78;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+nav a:hover{
+  color: #ffffff
+}
+nav a:hover:after{
+  width: 100%;
+}
+    </style>
+    
+    </head>
+    <body>
+      <header class="header-main">
+        <div class="header-main-logo">
+          <img src="static/logo.png" alt="python logo" />
+        </div>
+        <nav class="header-main-nav">
+          <ul>
+            <li><a href="{{ url_for('home') }}"style="text-decoration:none;">Home</a></li>
+            <li><a href="{{ url_for('about') }}"style="text-decoration:none;">About</a></li>
+            <li><a href="{{ url_for('faq') }}"style="text-decoration:none;">FAQ</a></li>
+            <li><a href="{{ url_for('features') }}"style="text-decoration:none;">Features</a></li>
+          </ul>
+        </nav>
+        <div class="header-main-sm">
+          <a href="https://discord.gg/gHJZdYZA"><div class="header-main-sm-disc"></div></a>
+          <a href="https://github.com/practical-python-org"><div class="header-main-sm-git"></div></a>
+        </div>
+      </header>
+        {% block content %}
+        {% endblock %}
+        <a href="https://discord.gg/ndHcNt2J"><button>Join our discord server!</button></a>
+    </body>
+</html>

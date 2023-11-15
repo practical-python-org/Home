@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="features">
+  <h3>Server Features</h3>
+  <style>
+    h3{
+      margin-left: 590px;
+    }
+    .features-images{
+      margin-top: 100px;
+      margin-left: 230px;
+    }
+    button{
+      margin-top: 150px;
+      margin-left: 590px;
+    }
+    .features-images{
+      display: flex;
+      margin: 2rem auto 5rem;
+      align-self: center;
+      margin: 2rem 0;   
+    }
+    .image-container{
+      margin: 0px;
+      padding: right;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    .image-container{
+      width: 300px;
+      display: flex;
+      margin: 100px auto;
+      position: relative;
+      cursor: pointer;
+      margin-left: 100px;
+      height: 220px;
+    }
+    .image-container img{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .overlay{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .image-text{
+      color: #fff;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+    }
+    .image-container:hover .overlay{
+      opacity: 1;
+    }
+    .image-container-run{
+      width: 300px;
+      height: 220px;
+      display: flex;
+      margin: 100px auto;
+      position: relative;
+      cursor: pointer;
+      margin-left: 100px;
+    }
+    .image-container-run img{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .overlay-run{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .image-text-run{
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+    }
+    .image-container-run:hover .overlay-run{
+      opacity: 1;
+    }
+  
+    .image-container-challenges{
+      width: 300px;
+      display: block;
+      margin: 100px auto;
+      position: relative;
+      cursor: pointer;
+      margin-left: 100px;
+    }
+    .image-container-challenges img{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .overlay-challenges{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .image-text-challenges{
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+    }
+    .image-container-challenges:hover .overlay-challenges{
+      opacity: 1;
+    }
+    .info{
+      font-size: 20px;
+      font-weight: lighter;
+      color: azure;
+    }
+  </style>
+  <body>
+    <div class="features-images">
+    <div class="image-container">
+      <img src="static/Zorak.jpg" alt="">
+      <div class="overlay">
+        <div class="image-text">
+          Zorak<br><p6 class="info">A discord bot!</p6>
+        </div>
+      </div>
+    </div>
+    <div class="image-container-run">
+      <img src="static/run.png" alt="" class="run-size">
+      <div class="overlay-run">
+        <div class="image-text-run">
+        I Run Code Bot<br><p6 class="info">Run code directly in the server!</p6>
+      </div>
+      </div>
+    </div>
+    <div class="image-container-challenges">
+      <img src="static/Challenges.jpg" alt="" class="challenge-size">
+      <div class="overlay-challenges">
+        <div class="image-text-challenges">
+        Daily Challenges<br><p6 class="info">Test your might!</p6>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</div>
+{% endblock %}
