@@ -1,7 +1,3 @@
-"""
-This is a comment from Xarlos!
-"""
-
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -25,6 +21,4 @@ def features():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080, debug=True)
-
-# Websites URL: http://127.0.0.1:8080
+    app.run(host='0.0.0.0')
