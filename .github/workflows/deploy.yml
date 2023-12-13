@@ -23,8 +23,8 @@ jobs:
           echo "$SSH_KEY" > super_dooper_secret_key && sudo chmod 600 super_dooper_secret_key
           ssh -o StrictHostKeyChecking=no -i super_dooper_secret_key ${USERNAME}@${HOST} << 'ENDSSH'
             cd project/Home 
-            sudo systemctl stop ${{APP_NAME}}
+            sudo systemctl stop ${APP_NAME}
             sudo git pull
-            sudo systemctl start ${{APP_NAME}}
+            sudo systemctl start ${APP_NAME}
             sudo systemctl restart nginx
           ENDSSH
