@@ -15,9 +15,6 @@
       body{
         background-color: #1e1e1e;
       }
-      h1{
-        margin-left: 340px;
-      }
       h1,h2,h3,h4,h6,p{
         color:azure;
       }
@@ -98,7 +95,6 @@
         border-radius: 6px;
         background: #ff3c78;
         transition: all 0.2s ease;
-        margin-left: 600px;
     }
 
     button:active {
@@ -114,62 +110,95 @@
 body{
   background-color: #0a0a0a;
 }
-nav{
-  height:100vh;
-  width: 70vw;
-  min-width: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: auto;
-}
-nav a{
-  position: relative;
-  text-decoration: none;
-  font-family: 'Poppins',sans-serif;
-  color: #a0a0a0;
-  font-size: 18px;
-  letter-spacing: 0.5px;
-}
-nav a:after{
-  content: "";
-  position: absolute;
-  background-color: #ff3c78;
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -10px;
-  transition: 0.3s;
-}
-nav a:hover{
-  color: #ffffff
-}
-nav a:hover:after{
-  width: 100%;
-}
+    </style>
+
+    <style>
+      /* navbar */
+      .new__header-main-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .new__header-main {
+        display: flex;
+        flex-direction: row;
+        background: hsl(199, 34%, 90%);
+        margin: 2rem 2rem;
+        border: 2px solid #03a9f4;
+        max-width: calc(100vw - 4rem);
+        border-radius: 15px;
+        padding: 0.2rem 0.8rem;
+        justify-content: space-between;
+        height: 4rem;
+        box-shadow: 0px 0px 0.2rem 0px white;
+      }
+      .new__header-main-nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+      }
+      .new__header-main-nav a {
+        font-size: 1.2rem;
+        font-family: Arial;
+        font-weight: bold;
+      }
+      .new__header-main-logo img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      .new__header-main-sm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .new__header-main-sm img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 15px;
+      }
+
+      /* home */
+      .mid-section {
+        display: flex;
+        justify-content: center;
+      }
+      .mid-section > div {
+        max-width: min(calc(100vw - 4rem), 70rem);
+        background: #223a45;
+        padding: 2rem 2rem;
+        border-radius: 15px;
+      }
+
+      /* join */
+      .join-server {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 2rem;
+      }
+
     </style>
     
     </head>
     <body>
-      <header class="header-main">
-        <div class="header-main-logo">
+      <header class="new__header-main">
+        <div class="new__header-main-logo">
           <img src="static/logo.png" alt="python logo" />
         </div>
-        <nav class="header-main-nav">
-          <ul>
-            <li><a href="{{ url_for('home') }}"style="text-decoration:none;">Home</a></li>
-            <li><a href="{{ url_for('about') }}"style="text-decoration:none;">About</a></li>
-            <li><a href="{{ url_for('faq') }}"style="text-decoration:none;">FAQ</a></li>
-            <li><a href="{{ url_for('features') }}"style="text-decoration:none;">Features</a></li>
-          </ul>
+        <nav class="new__header-main-nav">
+          <a href="{{ url_for('home') }}"style="text-decoration:none;">Home</a>
+          <a href="{{ url_for('about') }}"style="text-decoration:none;">About</a>
+          <a href="{{ url_for('faq') }}"style="text-decoration:none;">FAQ</a>
+          <a href="{{ url_for('features') }}"style="text-decoration:none;">Features</a>
         </nav>
-        <div class="header-main-sm">
-          <a href="https://discord.gg/practical-python-900302240559018015"><div class="header-main-sm-disc"></div></a>
-          <a href="https://github.com/practical-python-org"><div class="header-main-sm-git"></div></a>
+        <div class="new__header-main-sm">
+          <a href="https://discord.gg/practical-python-900302240559018015"><img src="/static/discord_logo.png" alt=""></a>
+          <a href="https://github.com/practical-python-org"><img src="/static/github_logo.png" alt=""></a>
         </div>
       </header>
-        {% block content %}
-        {% endblock %}
-        <a href="https://discord.gg/practical-python-900302240559018015"><button>Join our discord server!</button></a>
+        <div class="mid-section">{% block content %}{% endblock %}</div>
+        <div class="join-server"><a href="https://discord.gg/practical-python-900302240559018015"><button>Join our discord server!</button></a></div>
     </body>
 </html>
