@@ -1,9 +1,9 @@
 {% extends "base.html" %}
+
+{% block header %}<link rel="stylesheet" href="{{ url_for('static', filename='css/faq.css') }}">{% endblock %}
+
 {% block content %}
  <div class="faq">
-  <style>h4{
-    margin-top: 50px;
-  }</style>
   <h4>What version of Python should I install?</h4>
   <p>We recommend installing Python 3.10.xx. Installing the LATEST version of python is NOT recommended, as many libraries are not yet supported.</p>
   <h4>What IDE should I use?</h4>
