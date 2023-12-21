@@ -18,14 +18,12 @@ in root directory run
 ```bash
 docker-compose up -d
 ```
+if you make changes to the website, and need to see the new changes, use
+```bash
+docker compose up -d --build website
+```
 
 to shut down the app
 ```bash
 docker-compose down
 ```
-
-if experiencing something like `executable file not found in $PATH: unknown` then do
-```bash
-docker-compose build
-```
-and then do `docker-compose up -d`
